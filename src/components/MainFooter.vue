@@ -38,6 +38,7 @@
       @include media-breakpoint-down(sm) {
         border-bottom: none;
         text-align: center;
+        padding: 0;
       }
 
       &__social-links {

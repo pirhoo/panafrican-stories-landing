@@ -5,7 +5,7 @@
     </div>
     <h1 class="lead-jumbotron__heading">
       Raconter
-      <br class="d-none d-md-block"/>
+      <br class="d-none d-lg-block"/>
       l'Afrique autrement
     </h1>
     <p class="lead-jumbotron__desc">

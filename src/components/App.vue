@@ -87,9 +87,11 @@
       position: relative;
       z-index: 100;
       background: inherit;
+      margin-bottom: 44px;
 
       @include media-breakpoint-down(sm) {
         padding: 0 24px;
+        margin-bottom: 59px;
       }
     }
   }

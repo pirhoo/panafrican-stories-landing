@@ -131,6 +131,7 @@
       border-radius: 50%;
       z-index: 300;
       background: url('../assets/play.svg') center center transparent;
+      transition: 400ms;
     }
 
     & &__controls,
@@ -138,7 +139,9 @@
       top: 5%;
       right: 5%;
       transform: translate(0%, 0%);
+    }
 
+    &--pause &__controls {
       @include media-breakpoint-down(sm) {
         top: 50%;
         right: 50%;
