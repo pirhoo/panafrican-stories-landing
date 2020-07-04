@@ -1,6 +1,6 @@
 <template>
-  <div class="main-footer bg-dark text-light">
-    <div class="main-footer__container container d-md-flex">
+  <div class="main-footer container bg-dark text-light">
+    <div class="main-footer__container d-md-flex">
       <social-links class="flex-grow-1 main-footer__container__social-links" />
       <div class="main-footer__container__credits">
         © {{ year }} Panafrican Stories - Tous droits réservés.
@@ -30,6 +30,7 @@
   @import '../../node_modules/bootstrap/scss/_mixins';
 
   .main-footer {
+    padding: 0 72px;
 
     &__container {
       padding: 45px 0 34px;
