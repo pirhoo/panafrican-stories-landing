@@ -97,6 +97,7 @@
 
     @include media-breakpoint-down(sm) {
       max-width: 100%;
+      text-align: center;
     }
 
     &__input {
