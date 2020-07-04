@@ -9,7 +9,7 @@
       l'Afrique autrement
     </h1>
     <p class="lead-jumbotron__desc">
-      Reconnections l'Afrique et sa diaspora à travers les histoires d'afro-descendants.
+      Reconnectons l'Afrique et sa diaspora à travers les histoires d'afro-descendants.
     </p>
   </div>
 </template>
