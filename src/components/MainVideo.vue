@@ -27,7 +27,8 @@
       options () {
         return {
           controls: false,
-          clickToPlay: false
+          clickToPlay: false,
+          autoplay: true
         }
       }
     },

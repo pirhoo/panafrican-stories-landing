@@ -1,9 +1,9 @@
 <template>
-  <form class="newsletter-form" @submit.prevent="subscribe($event)">
-    <fieldset :disabled="frozen">
-      <label class="newsletter-form__label" :for="uniqueId">
-        Soyez les premiers informés
-      </label>
+  <form class="newsletter-form" @submit.prevent="subscribe($event)" :class="{ 'newsletter-form--success': !!successMessage, 'newsletter-form--error': !!errorMessage }">
+    <label class="newsletter-form__label" :for="uniqueId">
+      Soyez les premiers informés
+    </label>
+    <fieldset :disabled="frozen" :data-success-message="successMessage" :data-error-message="errorMessage">
       <div class="d-block d-md-flex">
         <input class="newsletter-form__input form-control form-control-lg" v-model="email" name="EMAIL" :id="uniqueId" placeholder="Recevoir la newsletter" />
         <button type="submit" class="btn btn-primary btn-lg text-nowrap text-white newsletter-form__submit">
@@ -67,12 +67,12 @@
       done ({ result, msg }) {
         if (result === 'success') {
           this.email = ''
-          this.successMessage = msg
+          this.successMessage = msg || "Merci !"
         } else {
           // Mailchimp formats errors in list
           this.errorMessage = last((msg || "Une erreur s'est produite").split('0 -'))
         }
-        this.unfreeze()
+        setTimeout(this.unfreeze, 3000)
       },
       resetMessages () {
         this.errorMessage = null
@@ -83,6 +83,7 @@
       },
       unfreeze () {
         this.frozen = false
+        this.resetMessages()
       }
     }
   }
@@ -93,15 +94,60 @@
   @import '../../node_modules/bootstrap/scss/_mixins';
 
   .newsletter-form {
-    max-width: 263px;
+    max-width: 263px + 8px + 132px;
 
     @include media-breakpoint-down(sm) {
       max-width: 100%;
       text-align: center;
     }
 
+    fieldset {
+      position: relative;
+      z-index: 0;
+
+      &:after {
+        content: '';
+        overflow: hidden;
+        padding: 0.5rem;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+        position: absolute;
+        top: -5px;
+        bottom: -5px;
+        left: -5px;
+        right: -5px;
+        border-radius: $border-radius-lg;
+        font-weight: bolder;
+        pointer-events: none;
+        transition: 400ms;
+      }
+    }
+
+    &--error fieldset,
+    &--success fieldset {
+
+      &:after {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+
+    &--error fieldset:after {
+      content: attr(data-error-message);
+      background: rgba($danger, 0.9);
+    }
+
+    &--success fieldset:after {
+      content: attr(data-success-message);
+      background: rgba($primary, 0.9);
+    }
+
     &__input {
       margin-right: 16px;
+      border-radius: 4px;
 
       @include media-breakpoint-down(sm) {
         margin-right: 0;
