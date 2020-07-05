@@ -120,7 +120,10 @@
       }
     }
 
-    &__controls, &__controls:hover {
+    &__controls,
+    &__controls:hover,
+    &__controls:focus,
+    &__controls:active {
       position: absolute;
       top: 50%;
       right: 50%;
@@ -137,9 +140,19 @@
 
     & &__controls,
     &--play &__controls {
-      top: 5%;
+      top: 45px + 95px / 2;
       right: 5%;
-      transform: translate(0%, 0%);
+      transform: translate(0%, -50%);
+
+      @include media-breakpoint-down(sm) {
+        top: 5%;
+        right: 5%;
+        transform: translate(0%, 0%) scale(0.7);
+      }
+    }
+
+    &--play &__controls {
+      background-image: url('../assets/pause.svg');
     }
 
     &--pause &__controls {
