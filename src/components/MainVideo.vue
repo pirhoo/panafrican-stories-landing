@@ -1,7 +1,7 @@
 <template>
   <div class="main-video" :class="{ 'main-video--play': state === 'play', 'main-video--pause': state === 'pause' }">
     <vue-plyr :options="options" ref="plyr" class="main-video__plyr">
-      <video autoplay loop src="https://s3.eu-west-3.amazonaws.com/media.panafricanstories.com/videos/00.mp4">
+      <video autoplay loop src="https://s3.eu-west-3.amazonaws.com/media.panafricanstories.com/videos/00.mp4" poster="../assets/poster.png">
         <source src="https://s3.eu-west-3.amazonaws.com/media.panafricanstories.com/videos/00.mp4" type="wideo/mp4" />
       </video>
     </vue-plyr>
@@ -76,7 +76,7 @@
         &__video-wrapper {
           flex-grow: 1;
 
-          video {
+          video, .plyr__poster {
             position: absolute;
             top: 0;
             left: 0;
