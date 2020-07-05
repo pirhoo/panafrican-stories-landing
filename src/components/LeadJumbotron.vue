@@ -51,6 +51,7 @@
 
       @include media-breakpoint-down(sm) {
         font-size: 36px;
+        line-height: 37px;
         margin-bottom: 32px;
       }
     }
@@ -62,6 +63,7 @@
 
       @include media-breakpoint-down(sm) {
         font-size: 16px;
+        line-height: 24px;
       }
     }
   }
