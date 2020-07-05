@@ -50,6 +50,7 @@
 
       &__credits {
         font-size: 12px;
+        font-family: $input-font-family;
 
         @include media-breakpoint-down(sm) {
           padding: 24px 0;

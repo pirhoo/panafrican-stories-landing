@@ -35,7 +35,7 @@
     &__coming-soon {
       font-size: 18px;
       margin-bottom: 16px;
-      font-weight: bold;
+      font-weight: normal;
       text-transform: uppercase;
 
       @include media-breakpoint-down(sm) {
@@ -45,8 +45,9 @@
 
     &__heading {
       font-size: 72px;
+      line-height: 75px;
       margin-bottom: 48px;
-      font-weight: bold;
+      font-weight: normal;
 
       @include media-breakpoint-down(sm) {
         font-size: 36px;
@@ -55,8 +56,9 @@
     }
 
     &__desc {
-      font-weight: bold;
+      font-weight: normal;
       font-size: 24px;
+      line-height: 28px;
 
       @include media-breakpoint-down(sm) {
         font-size: 16px;

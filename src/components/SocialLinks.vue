@@ -33,7 +33,7 @@
   .social-links {
 
     &__label {
-      font-weight: bold;
+      font-weight: normal;
 
       @include media-breakpoint-down(sm) {
         padding-bottom: 26px;
