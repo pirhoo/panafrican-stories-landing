@@ -24,7 +24,7 @@
     props: {
       action: {
         type: String,
-        default: 'https://pirhoo.com'
+        default: 'https://mc.us10.list-manage.com/signup-form/subscribe?u=76d5d5f38b640569aaf3bfc98&id=00ea78e1f0'
       }
     },
     data () {
@@ -67,7 +67,7 @@
       done ({ result, msg }) {
         if (result === 'success') {
           this.email = ''
-          this.successMessage = msg || "Merci !"
+          this.successMessage = "Merci !"
         } else {
           // Mailchimp formats errors in list
           this.errorMessage = last((msg || "Une erreur s'est produite").split('0 -'))
