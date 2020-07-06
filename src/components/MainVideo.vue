@@ -4,6 +4,7 @@
       <video autoplay loop poster="../assets/poster.png">
         <source src="https://s3.eu-west-3.amazonaws.com/media.panafricanstories.com/videos/01.webm" type="wideo/webm" />
         <source src="https://s3.eu-west-3.amazonaws.com/media.panafricanstories.com/videos/01.mp4" type="wideo/mp4" />
+        <source src="https://s3.eu-west-3.amazonaws.com/media.panafricanstories.com/videos/01.ogv" type="wideo/ogg" />
         <source src="https://s3.eu-west-3.amazonaws.com/media.panafricanstories.com/videos/01.mov" type="wideo/quicktime" />
       </video>
     </vue-plyr>
