@@ -101,6 +101,7 @@
               position: static;
               width: 100%;
               height: auto;
+              transform: translateX(0%);
             }
           }
         }
