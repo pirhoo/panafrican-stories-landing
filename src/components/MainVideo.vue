@@ -2,10 +2,10 @@
   <div class="main-video" :class="{ 'main-video--play': state === 'play', 'main-video--pause': state === 'pause' }">
     <vue-plyr :options="options" ref="plyr" class="main-video__plyr">
       <video autoplay loop poster="../assets/poster.png">
-        <source src="https://s3.eu-west-3.amazonaws.com/media.panafricanstories.com/videos/01.webm" type="wideo/webm" />
-        <source src="https://s3.eu-west-3.amazonaws.com/media.panafricanstories.com/videos/01.mp4" type="wideo/mp4" />
-        <source src="https://s3.eu-west-3.amazonaws.com/media.panafricanstories.com/videos/01.ogv" type="wideo/ogg" />
-        <source src="https://s3.eu-west-3.amazonaws.com/media.panafricanstories.com/videos/01.mov" type="wideo/quicktime" />
+        <source src="https://s3.eu-west-3.amazonaws.com/media.panafricanstories.com/videos/01.webm" type="video/webm" />
+        <source src="https://s3.eu-west-3.amazonaws.com/media.panafricanstories.com/videos/01.mp4" type="video/mp4" />
+        <source src="https://s3.eu-west-3.amazonaws.com/media.panafricanstories.com/videos/01.ogv" type="video/ogg" />
+        <source src="https://s3.eu-west-3.amazonaws.com/media.panafricanstories.com/videos/01.mov" type="video/quicktime" />
       </video>
     </vue-plyr>
     <button class="btn btn-light main-video__controls" @click="toggleState">
