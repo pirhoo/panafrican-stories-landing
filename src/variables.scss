@@ -17,6 +17,13 @@ $grid-breakpoints: (
   xl: 1440px
 );
 
+$container-max-widths: (
+  sm: 540px,
+  md: 990px,
+  lg: 1290px,
+  xl: 1440px
+) !default;
+
 $input-color: #757575;
 
 $border-radius-lg: 8px;

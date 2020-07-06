@@ -58,7 +58,7 @@
     &__container {
       position: relative;
       z-index: 100;
-      padding: 0 72px 45px;
+      padding: 0 72px 0;
 
       @include media-breakpoint-down(sm) {
         position: static;

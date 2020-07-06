@@ -79,7 +79,9 @@
           video, .plyr__poster {
             position: absolute;
             top: 0;
-            left: 0;
+            left: 50%;
+            width: 100%;
+            transform: translateX(-50%);
 
             @include media-breakpoint-down(sm) {
               position: static;
