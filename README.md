@@ -1,5 +1,7 @@
 # Panafrican Stories: Landing Page
 
+A temporary landing page for the project "Panafrican Stories".
+
 ## Project setup
 ```
 yarn install
