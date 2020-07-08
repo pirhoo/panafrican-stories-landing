@@ -1,4 +1,4 @@
-# panafrican-stories-landing
+# Panafrican Stories: Landing Page
 
 ## Project setup
 ```
