@@ -53,6 +53,6 @@
     "not dead"
   ],
   "vue": {
-     "publicPath": "http://www.panafricanstories.com/"
+     "publicPath": "https://www.panafricanstories.com/"
   }
 }
